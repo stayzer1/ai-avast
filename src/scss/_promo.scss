@@ -1,0 +1,114 @@
+.promo {
+  margin-top: 100px;
+  padding-top: clamp(2.5rem, 1.107rem + 5.714vw, 6.25rem);
+  background: linear-gradient(180deg, #e5e6e7 0%, #e4e4e4 50%, #d9dada 100%);
+  height: 808px;
+  position: relative;
+  overflow: hidden;
+}
+.br-mobile {
+  display: none;
+}
+.promo__info {
+  margin-left: auto;
+  width: 489px;
+  position: relative;
+  z-index: 3;
+  transform: translateX(-125px);
+}
+.promo__info--title {
+  font-weight: 900;
+  font-size: clamp(2.25rem, 2.157rem + 0.381vw, 2.5rem);
+  color: #2d2d2d;
+  padding-bottom: clamp(1rem, 0.814rem + 0.762vw, 1.5rem);
+  span {
+    color: #67c944;
+  }
+}
+.promo__info--descr {
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 24px;
+  // line-height: 150%;
+  color: rgba(45, 45, 45, 0.5);
+  padding-bottom: clamp(1.5rem, 1.129rem + 1.524vw, 2.5rem);
+}
+.promo__info--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 16px 32px;
+  width: clamp(15.563rem, 14.68rem + 3.619vw, 17.938rem);
+  background: #67c944;
+  // height: 58px;
+  gap: 10px;
+  font-weight: 600;
+  font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
+  text-align: center;
+  color: #fff;
+  img {
+    width: 24px;
+  }
+}
+.promo-abs-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.promo-abs-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+@media screen and (max-width: 1450px) {
+  .promo__info {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .promo-abs-1 {
+    left: -200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .promo__info {
+    margin-left: 0;
+    width: auto;
+  }
+  .promo-abs-1 {
+    width: clamp(37.688rem, 19.425rem + 74.921vw, 67.375rem);
+    top: 185px;
+  }
+  .promo-abs-2 {
+    width: clamp(19.75rem, 22.287rem + -10.41vw, 15.625rem);
+    transform: rotate(30deg);
+    right: -94px;
+    bottom: 420px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promo-abs-1 {
+    left: -118px;
+  }
+  .promo {
+    height: 736px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .promo-abs-1 {
+    top: 250px;
+  }
+  .br-mobile {
+    display: block !important;
+  }
+  .promo__info--title {
+    br {
+      display: none;
+    }
+  }
+}
